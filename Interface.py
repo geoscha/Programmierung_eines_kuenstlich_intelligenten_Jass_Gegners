@@ -1,3 +1,5 @@
+# Graphische Nutzer Oberfläche für das Jass Programm
+
 # Importe
 import time
 import random
@@ -16,7 +18,7 @@ spiel_modi = ["Obe-Abe", "Une-Ufe", "Herz-Trumpf", "Schaufel-Trumpf", "Karo-Trum
               "Kreuz-Trumpf"]  # Spielmodi-Bezeichungen
 sorten = ["6", "7", "8", "9", "10", "J", "Q", "K", "A"]  # Abkürzungen der Kartennamen
 
-farben = [pygame.image.load("/Users/georgschaeli/PycharmProjects/Schieber_2/Dateien_GUI/" + i + ".png") for i in
+farben = [pygame.image.load("Data/" + i + ".png") for i in
           farb_vokabular]  # Graphische Dateien laden
 
 entwickler_mod = True  # Computer Karten können eingesehen werden
@@ -64,7 +66,7 @@ for i in silb[0]:
     for ii in silb[1]:
         s2 = ii
         try:
-            model.append(load_model('/Users/georgschaeli/PycharmProjects/Schieber_2/Dateien_GUI/model_108_' + s1 + '-' + s2 + '_data.h5'))  # KNN Modell laden
+            model.append(load_model('Data/model_108_' + s1 + '-' + s2 + '_data.h5'))  # KNN Modell laden
         except:
             model.append("False")
     print(str(v), "/2")
